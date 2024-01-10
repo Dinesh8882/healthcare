@@ -1,0 +1,1032 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&family=Mulish&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main_color: #ff715ee0;
+    /* --main_color: #ff715e; */
+}
+
+.main_container {
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS for Nav_bar */
+.main_nav_container {
+    width: 100%;
+    height: 100px;
+    background-color: var(--main_color);
+    position: fixed;
+    z-index: 9999;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    backdrop-filter: blur(7px);
+
+
+}
+
+.nav_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.nav_list>ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+}
+
+.logo>a>h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.nav_list>ul>li {
+
+    padding: 0.3rem 0.9rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.nav_list>ul>li:hover {
+    background-color: #f76350;
+}
+
+.nav_list>ul>li:nth-child(6) {
+    background-color: rgba(236, 58, 58, 0.938);
+    padding: 0.6rem 1.9rem;
+    border-radius: 7px;
+
+}
+
+.nav_list>ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.nav_list>ul>li>.active:active {
+    color: red;
+}
+
+.nav_list>ul>li>a:hover {
+    color: red;
+}
+
+.nav_container>i {
+    position: absolute;
+    right: 3em;
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+/* CSS for Responsive Nav_bar */
+@media (max-width:926px) {
+    .nav_container {
+        justify-content: space-between;
+        padding: 0rem 1rem;
+    }
+
+    .nav_list>ul {
+        gap: 10px;
+    }
+
+    .nav_list>ul>li {
+        padding: 0.3rem 0.5rem;
+    }
+}
+  
+@media (max-width:787px) {
+    .nav_container>i {
+        display: inline-block;
+        margin-top: 2.2rem;
+        right: 2rem;
+    }
+
+    .nav_list>ul>li:nth-child(6) {
+
+        margin-bottom: 2rem;
+
+    }
+
+    .nav_container {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 0;
+        position: relative;
+    }
+
+    .logo>a>h2 {
+        margin-top: 2rem;
+        padding: 0 2rem;
+    }
+
+    .nav_list {
+        width: 100%;
+        height: 100%;
+        /* background-color: #FF725E; */
+    }
+
+    .nav_list>ul {
+        background-color: #f76350;
+        width: 100%;
+        /* height: 100vh; */
+        margin-top: 1.2rem;
+        flex-direction: column;
+        position: absolute;
+        left: -220%;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .nav_list>ul>li {
+        margin-top: 2rem;
+    }
+
+}
+
+@media (max-width:292px) {
+    .logo>a>h2 {
+        padding: 0 1rem;
+        font-size: 10.5vw;
+    }
+
+    .nav_container>i {
+        font-size: 10.5vw;
+        right: 10px;
+    }
+}
+
+@media (max-width:220px) {
+    .logo>a>h2 {
+        padding: 0 0.5rem;
+    }
+
+    .nav_container>i {
+        right: 5px;
+    }
+}
+
+@media (max-width:220px) {
+    .logo>a>h2 {
+        font-size: 13vw;
+        margin-top: 0.5rem;
+    }
+
+    .nav_container>i {
+        right: 80px;
+        top: 10px;
+    }
+}
+
+/* Hero_Section */
+.hero_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 7rem;
+    flex-direction: column;
+}
+
+.left_content {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.heading_left>h1 {
+    font-size: 4rem;
+    margin-top: -2rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.appointment {
+    padding: 1rem 2rem;
+}
+
+.appointment>a>span {
+    background-color: #FF725E;
+    color: rgb(246, 255, 255);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.pera_content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.right_content {
+    display: flex;
+    align-items: center;
+}
+
+.img_container {
+    width: 100%;
+    height: 100%;
+}
+
+.img_container>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Hero-Responsive_CSS */
+@media (max-width:1150px) {
+
+    .hero_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .left_content {
+        padding: 4rem 0rem;
+        margin-top: 3rem;
+
+    }
+}
+
+@media (max-width:610px) {
+
+    .left_content {
+        padding: 4rem 0rem;
+        margin-top: 5rem;
+    }
+
+    .hero_container {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width:338px) {
+    .appointment>a>span {
+
+        padding: 1rem 1rem;
+    }
+
+    .appointment>a {
+
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:610px) {
+    .pera_content {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:282px) {
+    .pera_content {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* About_Section */
+.about_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 7rem;
+    gap: 30px;
+}
+
+.img_about {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.img_about>img {
+    width: 65%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.aboutright_container {
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about_heading>h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.about_pera>p {
+    margin-bottom: 4rem;
+    font-size: 1.1rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.aboutleft_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.learn_more>a>span {
+    color: rgb(255, 255, 255);
+    padding: 1rem 3rem;
+    font-weight: 600;
+    background-color: #f76350;
+    border-radius: 0.5rem;
+}
+
+/* About-Section CSS for responsive */
+@media (max-width:1150px) {
+    .about_container {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .aboutleft_container {
+        flex: 2;
+    }
+
+    .img_about>img {
+        width: 100%;
+    }
+
+    .img_about {
+        height: 90%;
+    }
+}
+
+@media (max-width:520px) {
+    .about_heading>h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .about_pera>p {
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width:610px) {
+    .about_container {
+        padding: 0 2rem;
+    }
+
+    .heading_left>h1 {
+        font-size: 2rem;
+
+    }
+
+}
+
+
+
+/* Service-Container CSS */
+.service_container {
+    width: 100%;
+    padding: 2rem 0rem;
+}
+
+.service_content>h1 {
+    margin-top: 4rem;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+}
+
+.service_content>p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+    padding: 0rem 9rem;
+
+}
+
+@media screen and (max-width:939px) {
+    .service_content>p {
+        padding: 0 5rem;
+
+    }
+}
+
+@media screen and (max-width:440px) {
+    .service_content>p {
+        padding: 0 2rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:299px) {
+    .service_content>p {
+        padding: 0 1rem;
+
+    }
+}
+
+/* Cards_Section CSS */
+.cards_container {
+    width: 100%;
+    display: grid;
+    padding: 2rem 7rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.card1 {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.card1>.card_img {
+    position: relative;
+    overflow: hidden;
+    height: 12rem;
+
+}
+
+.card_img>img {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.card1:hover>.card_img>img {
+    transform: scale(1.1);
+}
+
+.card_content {
+    padding: 0.4rem 1rem 1rem;
+}
+
+.card_content>h2 {
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.card_content>h2::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    border-bottom: 3px solid #FF725E;
+    bottom: -5px;
+}
+
+.card_content>p {
+    margin-bottom: 1rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.card_content>a {
+    position: relative;
+    color: white;
+}
+
+.card_content>a>span {
+    background-color: #f76350;
+    padding: 0.4rem 1rem;
+}
+
+/* Responsive-Cards CSS */
+@media (max-width:1162px) {
+    .cards_container {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2rem 6rem;
+    }
+}
+
+@media (max-width:990px) {
+    .cards_container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 4rem;
+    }
+}
+
+@media (max-width:654px) {
+    .cards_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:510px) {
+    .cards_container {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width:338px) {
+    .cards_container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Our_Doctors-Section */
+.MEET-DOCTORS {
+    width: 100%;
+    padding: 7rem 7rem;
+}
+
+.our_meeting-heading {
+    width: 100%;
+}
+
+.our_meeting-heading h1 {
+    margin-bottom: 1rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.our_meeting-heading p {
+    width: 100%;
+    padding: 0.2rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.doctor_container {
+    width: 100%;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.doctor1 {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.doctor_img {
+    overflow: hidden;
+    position: relative;
+    height: 12rem;
+}
+
+.doctor_img>img {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+}
+
+.doctor_info {
+    padding: 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.doctor1:hover .doctor_info {
+    top: 0%;
+}
+
+.doctor_info>a>h2 {
+    color: white;
+}
+
+.info_icon {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1rem;
+}
+
+.doctor_info>.info_icon>a {
+    color: white;
+    padding: 0.5rem;
+    background-color: rgba(34, 32, 32, 0.712);
+}
+
+.doctor_info>.info_icon>a:hover {
+    background-color: #FF725E;
+
+}
+
+.doctor_info>p {
+    color: white;
+    margin-top: 1rem;
+}
+
+/* Responsive CSS for Doctor */
+@media (max-width:1164px) {
+    .doctor_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .our_meeting-heading p {
+
+        padding: 0.2rem 12rem;
+
+    }
+}
+
+
+
+
+
+@media (max-width:914px) {
+    .doctor_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .our_meeting-heading p {
+
+        padding: 0.2rem 8rem;
+
+    }
+}
+
+@media (max-width:650px) {
+    .doctor_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .our_meeting-heading p {
+
+        padding: 0.2rem 1rem;
+
+    }
+}
+
+@media screen and (max-width:926px) {
+    .our_meeting-heading p {
+        padding: 0.2rem 5rem;
+    }
+
+    .MEET-DOCTORS {
+        width: 100%;
+        padding: 7rem 4rem;
+
+    }
+}
+
+@media screen and (max-width:626px) {
+    .our_meeting-heading p {
+        padding: 0.2rem 3rem;
+    }
+
+    .MEET-DOCTORS {
+        width: 100%;
+        padding: 7rem 4rem;
+
+    }
+}
+
+@media screen and (max-width:530px) {
+    .our_meeting-heading p {
+        padding: 0.2rem 1rem;
+    }
+
+    .MEET-DOCTORS {
+        width: 100%;
+        padding: 7rem 3rem;
+
+    }
+}
+
+@media (max-width:510px) {
+    .MEET-DOCTORS {
+
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width:340px) {
+    .MEET-DOCTORS {
+
+        padding: 2rem 1rem;
+    }
+
+    .our_meeting-heading h1 {
+        margin-bottom: 0.1rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* Form_Section */
+.form_container {
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    padding: 5rem 4rem;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.main_form {
+    padding: 1rem 7rem;
+
+}
+
+.form_image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form_image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main_form>form {
+    display: flex;
+    flex-direction: column;
+}
+
+form>h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+form>label {
+    margin-bottom: 0.3rem;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+form>input {
+    border: none;
+    height: 2rem;
+
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+    padding: 0 0.3rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form>button {
+    background-color: #FF725E;
+    margin-top: 2rem;
+    height: 2.5rem;
+    border: none;
+    font-family: 'Mulish', sans-serif;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Responsive-form CSS */
+@media (max-width:1046px) {
+    .form_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:588px) {
+    .main_form {
+        padding: 1rem 3rem;
+
+    }
+}
+
+@media (max-width:423px) {
+    .main_form {
+        padding: 1rem 1rem;
+
+    }
+
+    .form_container {
+        padding: 4rem 1rem;
+    }
+}
+
+
+/* Footer Section CSS  */
+.footer_container {
+    display: grid;
+    padding: 3rem 5rem;
+    grid-template-columns: 34% 20% 20% 20%;
+    background-color: rgb(53, 61, 71);
+    gap: 2rem;
+    /* position: relative; */
+}
+
+.footer_container>.tittle>ul {
+    list-style: none;
+}
+
+.footer_about_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_about_container>a>h1 {
+    margin-bottom: 1rem;
+    color: white;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.footer_about_container>p {
+    margin-bottom: 1rem;
+    color: #51718f;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.icons_container {
+    display: flex;
+    gap: 1rem;
+}
+
+.icons_container>a:hover {
+    background-color: #FF725E;
+}
+
+.icons_container>a {
+    padding: 0.4rem 0.5rem;
+    background-color: #51718f;
+    color: white;
+}
+
+.tittle>h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+
+}
+
+.tittle>h2::before {
+    content: "";
+    position: absolute;
+    border: 2px solid #FF725E;
+    width: 0%;
+    top: 100%;
+    margin-top: 0.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.tittle>h2:hover::before {
+    width: 40%;
+}
+
+.tittle>ul>li {
+    margin-bottom: 0.8rem;
+}
+
+.tittle>ul>li>a {
+    color: #51718f;
+    font-size: 1rem;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.tittle>ul>li>a:hover {
+    color: #FF725E;
+}
+
+.tittle_p>p {
+    color: #51718f;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* Footer Section Responsive */
+@media (max-width:815px) {
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:561px) {
+    .footer_container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width:400px) {
+    .footer_container {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width:290px) {
+    .footer_about_container>a>h1 {
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+
+    }
+
+    .tittle>h2 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .tittle>ul>li {
+        margin-bottom: 0.5rem;
+    }
+
+    .icons_container {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width:246px) {
+    .footer_container {
+        padding: 3rem 1rem;
+    }
+}
+
+/* Copy_Right Section */
+.copy_right {
+    margin-top: -1rem;
+    padding: 2rem 0rem;
+    background-color: rgb(53, 61, 71);
+
+}
+
+.copy_right>p {
+    text-align: center;
+    color: #2d94f5;
+    font-family: 'Exo 2', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.copy_right>p>i {
+    color: white;
+    margin-right: 0.6rem;
+}
+
+
