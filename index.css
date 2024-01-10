@@ -236,6 +236,7 @@ body {
     border-radius: 0.5rem;
 }
 
+
 .pera_content {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -306,11 +307,23 @@ body {
 }
 
 @media (max-width:282px) {
+    
     .pera_content {
-        font-size: 0.8rem;
+        font-size: 5vw;
+        
+    }
+    .appointment>a>span {
+
+        padding: 0.5rem .7rem;
+    }
+
+    .appointment>a {
+
+        font-size: 2vw;
     }
 
 }
+
 
 /* About_Section */
 .about_container {
